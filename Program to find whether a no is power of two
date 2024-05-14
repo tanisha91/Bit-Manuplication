@@ -1,0 +1,9 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+	   int n=86;
+	   int res=(n&(n-1));
+System.out.print(res==0 ?"true":"false");
+}
+}
