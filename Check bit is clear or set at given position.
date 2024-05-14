@@ -1,0 +1,17 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=20,k=2;
+	    int mask=1;
+	    while(k-->0){
+	        mask=mask<<1;
+	    }
+	    if((mask& n)>0) 
+		System.out.println("true");
+		else
+		System.out.print("false;");
+	}
+}
+
+o/p -> True
