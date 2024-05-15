@@ -1,0 +1,26 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int a=18;
+	    int res=rec(a);
+		System.out.println(res);
+	}
+	static int rec(int n){
+	    if(n==0 ) return 0;
+	    int x=largepow(n);
+	    int res= (1<<(x-1))*x;
+	    int msp=n-(1<<x)+1;
+	    int rest=n-(1<<x);
+	  return (res+msp+rec(rest));
+	     
+	}
+	static int largepow(int n){
+	    int x=0;
+	    while((1<<x) <=n){
+	        x++;
+	    }
+	    return x-1;
+	}
+
+}
