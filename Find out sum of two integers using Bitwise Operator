@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+    static int fun(int a,int b){
+        if(b==0) return a;
+        int carry=a&b;
+        a=a^b;
+        b=carry<<1;
+           return fun(a,b);
+        }
+	public static void main(String[] args) {
+	   int asn=fun(17,9);
+	   System.out.print(asn);
+	}
+}
+
+o/p -> 26
