@@ -1,0 +1,18 @@
+class sol{
+public static void main(String args[]){
+int arr[]={20,32,40,20,56,40};
+int xor=0;
+for(int val:arr){
+xor=xor^val;
+}
+int setbit=xor&(~xor);  // Mask find out
+int x=0,y=0;
+for(int val:arr){
+if((val&setbit)==0)
+x=x^val;
+else
+y=y^val;
+}
+System.out.print(x +" "+ y);
+}
+}
